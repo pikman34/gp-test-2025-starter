@@ -3,6 +3,9 @@ extends Node2D
 @export var world_speed = 100
 @onready var player = $player
 @onready var moving_enemies = $Moving
+@onready var player_lives_label = $Control/PlayerLives
+@onready var enemies_label = $Control/Enemies
+@onready var enemies_alive = $Moving.get_child_count()
 
 var last_enemy_position = Vector2.ZERO
 var enemy = preload("res://enemy.tscn")
@@ -18,6 +21,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Time.get_ticks_msec() > new_spawn_time:
 		_spawn_enemies()
+		
+		enemies_label.text = "Enemies: %s" % moving_enemies.get_child_count()
 
 func _spawn_enemies():
 	var available_enemies = [
