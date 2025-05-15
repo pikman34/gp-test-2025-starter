@@ -1,5 +1,11 @@
 # Game Programming Lab Test 2025
 
+## Rules
+- No collaboration
+- Start with an empty Godot 4.4 project
+- No use of Google/Youtube or online tutorials or any form
+- No use of AI
+
 Here is a video of the project you need to make today:
 
 [![YouTube](http://img.youtube.com/vi/vuxFFqIfbJk/0.jpg)](http://www.youtube.com/watch?v=vuxFFqIfbJk)
