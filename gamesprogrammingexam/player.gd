@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+@export var lives = 5
 
 
 func _physics_process(delta: float) -> void:
@@ -17,5 +18,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = directionY * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+		
+
 
 	move_and_slide()

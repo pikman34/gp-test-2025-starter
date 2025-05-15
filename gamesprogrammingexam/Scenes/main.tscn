@@ -12,19 +12,21 @@ size = Vector2(1153, 648)
 script = ExtResource("1_8gbba")
 
 [node name="player" parent="." instance=ExtResource("1_jjgbg")]
-position = Vector2(394, 214)
+position = Vector2(570, 327)
 
-[node name="Moving" type="Node2D" parent="."]
+[node name="Static" type="Node2D" parent="."]
 
-[node name="PlayArea" type="Area2D" parent="Moving"]
+[node name="PlayArea" type="Area2D" parent="Static"]
 script = ExtResource("3_jjvhh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving/PlayArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static/PlayArea"]
 position = Vector2(575.5, 324)
 shape = SubResource("RectangleShape2D_jjgbg")
 
+[node name="Moving" type="Node2D" parent="."]
+
 [node name="enemy" parent="Moving" instance=ExtResource("2_bo1nx")]
-position = Vector2(1130, 280)
+position = Vector2(1088, 296)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -45,4 +47,4 @@ offset_right = 40.0
 offset_bottom = 52.0
 text = "Enemies: "
 
-[connection signal="area_entered" from="Moving/PlayArea" to="Moving/PlayArea" method="_on_area_entered"]
+[connection signal="area_entered" from="Static/PlayArea" to="Static/PlayArea" method="_on_area_entered"]

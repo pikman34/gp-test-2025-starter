@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var player = preload("res://player.tscn")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
