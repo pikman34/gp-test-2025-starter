@@ -41,7 +41,7 @@ func _spawn_enemies():
 		else:
 			
 			var x = last_enemy_position.x + rng.randi_range(35, 55)
-			var y = clamp(last_enemy_position.y + rng.randi_range(-150, 150), 0, 600)
+			var y = clamp(last_enemy_position.y + rng.randi_range(-300, 300), 0, 600)
 			new_enemy.position = Vector2(x, y)
 		
 		moving_enemies.add_child(new_enemy)
