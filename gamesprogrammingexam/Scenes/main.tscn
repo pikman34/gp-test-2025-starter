@@ -49,4 +49,31 @@ offset_right = 40.0
 offset_bottom = 52.0
 text = "Enemies: "
 
+[node name="DeathUI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 570.0
+offset_top = 327.0
+offset_right = 610.0
+offset_bottom = 367.0
+
+[node name="GameOverText" type="Label" parent="DeathUI"]
+layout_mode = 0
+offset_left = -293.0
+offset_top = -279.0
+offset_right = 287.0
+offset_bottom = -141.0
+theme_override_font_sizes/font_size = 101
+text = "GAME OVER"
+
+[node name="YouSurvivedText" type="Label" parent="DeathUI"]
+layout_mode = 0
+offset_left = -234.0
+offset_top = -133.0
+offset_right = 211.0
+offset_bottom = -78.0
+theme_override_font_sizes/font_size = 40
+text = "You Survived  Enemies!"
+
 [connection signal="area_entered" from="Static/PlayArea" to="Static/PlayArea" method="_on_area_entered"]

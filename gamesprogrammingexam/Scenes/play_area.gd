@@ -12,4 +12,5 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	if body.is_in_group("Enemy"):
+		print("Enemy Despawned")
 		body.queue_free()
