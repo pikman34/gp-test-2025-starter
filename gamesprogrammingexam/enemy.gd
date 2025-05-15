@@ -19,10 +19,12 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
+		# reduces lives by 1 updates the text and removes the enemy
 		world.lives -= 1
 		player_lives_label.text = "Player Lives: %s" % world.lives
 		queue_free()
 		if world.lives == 0:
+			# stops the spawning function, destroys the player and gives the game over text
 			body.queue_free()
 			world.active = false
 			you_survived_enemies_label.text = "You survived %s Enemies!" % world.moving_enemies.get_child_count()
