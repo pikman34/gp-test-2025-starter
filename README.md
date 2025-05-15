@@ -3,7 +3,7 @@
 ## Rules
 - No collaboration
 - Start with an empty Godot 4.4 project
-- No use of Google/Youtube or online tutorials or any form
+- No use of Google/Youtube or online tutorials
 - No use of AI
 
 Here is a video of the project you need to make today:
@@ -13,10 +13,10 @@ Here is a video of the project you need to make today:
 What is happening:
 
 - The white square is the Player. The player can be moved using the arrow keys or WASD. The player starts with 5 lives
-- Enemies spawn offscreen the right. When an enemy is spawned, the Enemies count in the UI goes up
+- Enemies spawn offscreen to the right. When an enemy is spawned, the Enemies count in the UI goes up
 - The enemies move left and get removed when they go offscreen
 - If the player and enemy collide, the player looses a life
-- If the player looses all their lives, its game over
+- If the player looses all their lives, it's game over
 
 ## Instructions
 
